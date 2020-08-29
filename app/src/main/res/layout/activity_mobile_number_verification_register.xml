@@ -2,103 +2,91 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnNextToVerifyMobileNumber"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginRegister.Register"
-    >
-
+    tools:context=".LoginRegister.MobileNumberVerificationRegister">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_registerbackground">
-
-
+        android:background="@drawable/ic_verifycoderegisterbackground">
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         android:src="@drawable/registerimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView36"
+        android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginRight="74dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="145dp"
         android:fontFamily="@font/playfair_display_bold"
         android:text="@string/here"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView37"
+        android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:fontFamily="@font/playfair_display_bold"
         android:text="@string/yourFirst"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <TextView
-        android:id="@+id/textView38"
+        android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:fontFamily="@font/playfair_display_bold"
         android:text="@string/stepWith"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="63dp"
-        android:layout_marginRight="63dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
         android:fontFamily="@font/playfair_display_bold"
         android:text="@string/us"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <RelativeLayout
         android:id="@+id/relativeLayoutFormRegister"
         android:layout_width="369dp"
-        android:layout_height="415dp"
+        android:layout_height="353dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/register_form_shape"
         android:elevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView7">
+        app:layout_constraintTop_toBottomOf="@id/imageView8">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -106,102 +94,31 @@
 
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextTextPersonName9"
                 android:layout_width="343dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="152dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/ic_rectangleregistersuccess"
-                android:drawableLeft="@drawable/ic_bx_usersvg"
+                android:drawableLeft="@drawable/ic_bx_phone"
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:fontFamily="@font/nunito_sans_black"
-                android:hint="@string/enterName"
+                android:hint="@string/MobileNumber"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:textColorHint="#ACACAC"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="343dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/ic_rectangleregistersuccess"
-                android:drawableLeft="@drawable/ic_bx_usersvg"
-                android:drawablePadding="20dp"
-                android:ems="10"
-                android:fontFamily="@font/nunito_sans_black"
-                android:hint="@string/enterUName"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
-                android:textColorHint="#ACACAC"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="343dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/ic_rectangleregistersuccess"
-                android:drawableLeft="@drawable/ic_bx_envelopesvg"
-                android:drawablePadding="20dp"
-                android:ems="10"
-                android:fontFamily="@font/nunito_sans_black"
-                android:hint="@string/enterEmail"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
-                android:textColorHint="#ACACAC"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="343dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/ic_rectangleregistersuccess"
-                android:drawableLeft="@drawable/ic_bx_lock_altsvg"
-                android:drawablePadding="20dp"
-                android:ems="10"
-                android:fontFamily="@font/nunito_sans_black"
-                android:hint="@string/enterPass"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
-                android:textColorHint="#ACACAC"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
             <Button
-                android:id="@+id/btnNextToEnterMobileNumber"
+                android:id="@+id/btnNextToEVerifyMobileNumber"
                 android:layout_width="104dp"
                 android:layout_height="41dp"
                 android:layout_marginStart="150dp"
@@ -212,28 +129,14 @@
                 android:background="@drawable/ic_btnrectanglewelcome"
                 android:fontFamily="@font/nunito_sans_black"
                 android:text="@string/next"
-                android:textColor="@color/design_default_color_on_primary"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
 
             <TextView
-                android:id="@+id/loginActivityMover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/login"
-                android:textColor="#131CE7"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/textView41"
-                app:layout_constraintTop_toBottomOf="@+id/btnNextToEnterMobileNumber" />
-
-            <TextView
-                android:id="@+id/textView41"
+                android:id="@+id/textView45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
@@ -244,41 +147,55 @@
                 android:textColor="@color/design_default_color_on_secondary"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnNextToEnterMobileNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/btnNextToEVerifyMobileNumber" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/login"
+                android:textColor="#131CE7"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/btnNextToEVerifyMobileNumber" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="46dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:src="@drawable/ic_line4"
-        app:layout_constraintEnd_toStartOf="@+id/textView42"
+        app:layout_constraintEnd_toStartOf="@+id/textView47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="88dp"
-        android:layout_height="6dp"
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="46dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:src="@drawable/ic_line4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintStart_toEndOf="@+id/textView47"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
@@ -295,7 +212,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -303,10 +220,9 @@
         android:layout_marginTop="15dp"
         android:src="@drawable/google"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintTop_toBottomOf="@id/textView47" />
 
     <ImageView
-        android:id="@+id/fbRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -316,12 +232,15 @@
         android:layout_marginRight="150dp"
         android:src="@drawable/facebook"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@id/textView42" />
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@id/textView47" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/fbRegister"
+            app:layout_constraintTop_toBottomOf="@id/imageView12"
             tools:ignore="MissingConstraints" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

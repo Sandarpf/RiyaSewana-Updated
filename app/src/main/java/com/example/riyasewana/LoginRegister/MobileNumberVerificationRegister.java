@@ -6,28 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.example.riyasewana.R;
 
-public class Login extends AppCompatActivity {
+public class MobileNumberVerificationRegister extends AppCompatActivity {
 
     //Variables
-    TextView txtRegister;
+    Button btnNextToVerifyNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_mobile_number_verification_register);
 
         //Hooks
-        txtRegister = findViewById(R.id.registerActivityMover);
+        btnNextToVerifyNumber = findViewById(R.id.btnNextToEVerifyMobileNumber);
 
-        txtRegister.setOnClickListener(new View.OnClickListener() {
+        btnNextToVerifyNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Login.this,Register.class);
+                Intent i = new Intent(MobileNumberVerificationRegister.this,RegisterVerifyCode.class);
                 startActivity(i);
             }
         });

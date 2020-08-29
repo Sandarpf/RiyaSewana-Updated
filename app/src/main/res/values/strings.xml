@@ -46,5 +46,17 @@
     <string name="stepWith">Step With</string>
     <string name="us">Us</string>
     <string name="enterName">Enter Name</string>
+    <string name="enterEmail">Enter Email</string>
+    <string name="next">Next</string>
+    <string name="alreadyHaveAccount">Already have an account?</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="code">CODE</string>
+    <string name="verification">VERIFICATION</string>
+    <string name="enteronetimepass">Enter One Time Password Sent On</string>
+    <string name="countrycode">+94</string>
+    <string name="number">772729729</string>
+    <string name="didntReceiveOTP">Didn\'t receive the OTP?</string>
+    <string name="resend">Resend</string>
+    <string name="verifyCode">VERIFY CODE</string>
 
 </resources>

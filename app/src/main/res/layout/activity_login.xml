@@ -132,7 +132,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/registerActivityMover"
             android:layout_width="83dp"
             android:layout_height="20dp"
             android:layout_marginStart="10dp"

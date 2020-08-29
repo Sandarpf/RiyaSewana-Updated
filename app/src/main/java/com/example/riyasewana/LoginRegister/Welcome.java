@@ -33,6 +33,7 @@ public class Welcome extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Welcome.this,TermsAndConditions.class);
                 startActivity(i);
+                finish();
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
