@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginRegister.RegisterVerifyCode"></activity>
+        <activity android:name=".ForgotPassword.ForgotPasswordVeriyCode"></activity>
+        <activity android:name=".ForgotPassword.ForgotPasswordEnterNumber" />
+        <activity android:name=".LoginRegister.RegisterVerifyCode" />
         <activity android:name=".LoginRegister.MobileNumberVerificationRegister" />
         <activity android:name=".LoginRegister.Register" />
         <activity android:name=".LoginRegister.Login" />

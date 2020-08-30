@@ -58,5 +58,6 @@
     <string name="didntReceiveOTP">Didn\'t receive the OTP?</string>
     <string name="resend">Resend</string>
     <string name="verifyCode">VERIFY CODE</string>
+    <string name="enterMobileOnce">Enter Your Mobile Number which you used when Register as new Member.</string>
 
 </resources>
