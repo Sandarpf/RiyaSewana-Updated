@@ -24,23 +24,23 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Hooks
-        txtLogin = findViewById(R.id.loginActivityMover);
-        nextToEnterMobileNumber = findViewById(R.id.btnNextToEnterMobileNumber);
+//        txtLogin = findViewById(R.id.loginActivityMover);
+//        nextToEnterMobileNumber = findViewById(R.id.btnNextToEnterMobileNumber);
 
-        txtLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Register.this,Login.class);
-                startActivity(i);
-            }
-        });
-
-        nextToEnterMobileNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Register.this,MobileNumberVerificationRegister.class);
-                startActivity(i);
-            }
-        });
+//        txtLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Register.this,Login.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//        nextToEnterMobileNumber.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Register.this,MobileNumberVerificationRegister.class);
+//                startActivity(i);
+//            }
+//        });
     }
 }

@@ -9,19 +9,18 @@ import android.widget.Button;
 
 import com.example.riyasewana.R;
 
-public class ForgotPasswordVeriyCode extends AppCompatActivity {
-    Button verifyBtn;
+public class ResetPassword extends AppCompatActivity {
 
+    Button updatePassBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password_veriy_code);
-
-        verifyBtn = findViewById(R.id.verifyCodeForgotPass);
-        verifyBtn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_reset_password);
+        updatePassBtn = findViewById(R.id.updatePasswordBtn);
+        updatePassBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ForgotPasswordVeriyCode.this,ResetPassword.class);
+                Intent i = new Intent(ResetPassword.this,ResetPasswordSuccess.class);
                 startActivity(i);
             }
         });

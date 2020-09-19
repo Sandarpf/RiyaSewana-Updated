@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPassword.ForgotPasswordVeriyCode"></activity>
+        <activity android:name=".BordingScreen.BordingScreenThree"></activity>
+        <activity android:name=".BordingScreen.BordingScreenTwo" />
+        <activity android:name=".BordingScreen.BordingScreenOne" />
+        <activity android:name=".ForgotPassword.ResetPasswordSuccess" />
+        <activity android:name=".ForgotPassword.ResetPassword" />
+        <activity android:name=".ForgotPassword.ForgotPasswordVeriyCode" />
         <activity android:name=".ForgotPassword.ForgotPasswordEnterNumber" />
         <activity android:name=".LoginRegister.RegisterVerifyCode" />
         <activity android:name=".LoginRegister.MobileNumberVerificationRegister" />

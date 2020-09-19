@@ -59,5 +59,25 @@
     <string name="resend">Resend</string>
     <string name="verifyCode">VERIFY CODE</string>
     <string name="enterMobileOnce">Enter Your Mobile Number which you used when Register as new Member.</string>
+    <string name="setYour">Set Your</string>
+    <string name="newPass">New Password</string>
+    <string name="newTopic">NEW</string>
+    <string name="credintial">CREDENTIALS</string>
+    <string name="identityVerified">Your identity has been verified!</string>
+    <string name="setYourNewPass">Set your new password</string>
+    <string name="confirmPass">Confirm Password</string>
+    <string name="update">UPDATE</string>
+    <string name="passUpdated">Your password has been updated</string>
+    <string name="skipTag">SKIP</string>
+    <string name="welcomeToRiyaSewana">Welcome to Riya Sewana</string>
+    <string name="experianceBetterWay">Experiance a better way of buying and selling</string>
+    <string name="easiestWay">Easiest way to Buy and Sell Vehicles and Vehicle Accessories</string>
+    <string name="buyandsell"><![CDATA[Buy & Sell Cars/ Accessories]]></string>
+    <string name="youDontWantTo">You don\'t have to be a mechanic to make a little money on  cars and accessories</string>
+    <string name="sellingAtHighestValue"><![CDATA[Selling Cars & Accessories at Their Highest Value!]]></string>
+    <string name="BargainLike">Bargain like a shark</string>
+    <string name="sellYouVehicle">Sell Your Vehicles or Accessories on Riya Sewana! It\'s easy and free</string>
+    <string name="putYourAd">Put Your Advertisement Free Today!</string>
+    <string name="letsStart">Let\'s start</string>
 
 </resources>
