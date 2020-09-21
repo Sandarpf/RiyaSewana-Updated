@@ -278,6 +278,7 @@
                 android:layout_marginRight="125dp"
                 android:background="@drawable/ic_btnrectanglewelcome"
                 android:fontFamily="@font/nunito_sans_black"
+                android:onClick="validatePin"
                 android:text="@string/verifyCode"
                 android:textColor="@color/design_default_color_background"
                 android:textSize="15sp"

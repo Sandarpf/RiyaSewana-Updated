@@ -159,6 +159,7 @@
                 android:layout_marginRight="150dp"
                 android:background="@drawable/ic_btnrectanglewelcome"
                 android:fontFamily="@font/nunito_sans_black"
+                android:onClick="mobileNumberVerify"
                 android:text="@string/next"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"

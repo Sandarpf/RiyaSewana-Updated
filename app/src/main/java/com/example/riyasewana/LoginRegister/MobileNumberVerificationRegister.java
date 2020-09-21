@@ -9,11 +9,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.riyasewana.R;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class MobileNumberVerificationRegister extends AppCompatActivity {
 
     //Variables
     Button btnNextToVerifyNumber;
+    TextInputLayout mobileNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +25,29 @@ public class MobileNumberVerificationRegister extends AppCompatActivity {
 
         //Hooks
         btnNextToVerifyNumber = findViewById(R.id.btnNextToEVerifyMobileNumber);
+        mobileNumber = findViewById(R.id.registerMobileNumber);
+    }
+    public void mobileNumberVerify(View view){
+        if(!verifyMobile()){
+            return;
+        }
+        else{
+            Intent i = new Intent(getApplicationContext(),RegisterVerifyCode.class);
+            startActivity(i);
+        }
+    }
 
-        btnNextToVerifyNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MobileNumberVerificationRegister.this,RegisterVerifyCode.class);
-                startActivity(i);
-            }
-        });
+    private boolean verifyMobile(){
+        String value = mobileNumber.getEditText().getText().toString().trim();
+
+        if(value.isEmpty()){
+            mobileNumber.setError("Mobile Number field cannot be empty!");
+            return false;
+        }
+        else{
+            mobileNumber.setError(null);
+            mobileNumber.setErrorEnabled(false);
+            return true;
+        }
     }
 }
