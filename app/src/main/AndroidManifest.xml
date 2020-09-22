@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BordingScreen.BordingScreenThree"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".BordingScreen.BordingScreenThree" />
         <activity android:name=".BordingScreen.BordingScreenTwo" />
         <activity android:name=".BordingScreen.BordingScreenOne" />
         <activity android:name=".ForgotPassword.ResetPasswordSuccess" />
