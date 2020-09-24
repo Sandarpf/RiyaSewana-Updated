@@ -79,12 +79,13 @@
     <string name="sellYouVehicle">Sell Your Vehicles or Accessories on Riya Sewana! It\'s easy and free</string>
     <string name="putYourAd">Put Your Advertisement Free Today!</string>
     <string name="letsStart">Let\'s start</string>
-    <string name="nav_home" />
-    <string name="nav_search" />
-    <string name="nav_fav" />
-    <string name="nav_mess" />
-    <string name="nav_pro" />
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_fav">Favourites</string>
+    <string name="nav_mess">Message</string>
+    <string name="nav_pro">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_add">Add</string>
 
 </resources>
