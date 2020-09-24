@@ -1,9 +1,15 @@
 package com.example.riyasewana.LoginRegister;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -53,10 +59,53 @@ public class Login extends AppCompatActivity {
 
     public void validateLogins(View view){
 
-       if(!validateUserName() | !validatePassword()){
-           return;
-       }
+        if(!isConnected(this)){
+            showCustomDialog();
+        }else{
+            //validate username and password fields
+            if(!validateUserName() | !validatePassword()){
+                return;
+            }
+        }
 
+
+
+    }
+    //custom dialog box
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+        builder.setMessage("Please Connect to internet to proceed further")
+                .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+            }
+        })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(getApplicationContext(),Welcome.class));
+                        finish();
+                    }
+                });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    //checking connection
+    private boolean isConnected(Login login) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) login.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if((wifiConn != null && wifiConn.isConnected()) || (mobileConn != null && mobileConn.isConnected())){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     private boolean validateUserName(){
