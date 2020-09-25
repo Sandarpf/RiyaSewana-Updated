@@ -16,7 +16,7 @@ import com.example.riyasewana.R;
 public class Welcome extends AppCompatActivity {
 
     //Variables
-    TextView terms , unregisterLogin;
+    TextView terms;
     Button login,register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,6 @@ public class Welcome extends AppCompatActivity {
         terms = findViewById(R.id.TermsAndConditionMover);
         login = findViewById(R.id.btnLogin);
         register = findViewById(R.id.btnRegister);
-
-        unregisterLogin = findViewById(R.id.unregisterLogin);
 
         terms.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,14 +48,6 @@ public class Welcome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Welcome.this,Register.class);
-                startActivity(i);
-            }
-        });
-
-        unregisterLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Welcome.this, MainScreen.class);
                 startActivity(i);
             }
         });

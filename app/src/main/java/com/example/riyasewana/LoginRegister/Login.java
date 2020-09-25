@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.riyasewana.ForgotPassword.ForgotPasswordEnterNumber;
+import com.example.riyasewana.Fragments.MainScreen;
 import com.example.riyasewana.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -65,6 +66,9 @@ public class Login extends AppCompatActivity {
             //validate username and password fields
             if(!validateUserName() | !validatePassword()){
                 return;
+            }else{
+                Intent i = new Intent(getApplicationContext(), MainScreen.class);
+                startActivity(i);
             }
         }
 
