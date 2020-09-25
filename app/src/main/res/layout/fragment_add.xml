@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,5 +9,91 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/add_screen_img"
+            android:layout_width="300dp"
+            android:layout_height="268dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/add_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_scree_txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="256dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="@string/add_a_new"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_screen_txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="308dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="@string/advertisement"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_screen_vehicle_btn"
+            android:layout_width="140dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radious"
+            android:drawableTop="@drawable/search_vehicle_btn_1"
+            android:drawablePadding="0.5dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/vehicles"
+            android:textAlignment="center"
+            android:textColor="@color/strokeColor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <Button
+            android:id="@+id/add_screen_parts_btn"
+            android:layout_width="140dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radious"
+            android:drawableTop="@drawable/search_parts_btn_1"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/parts"
+            android:textAlignment="center"
+            android:textColor="@color/strokeColor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.822"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
