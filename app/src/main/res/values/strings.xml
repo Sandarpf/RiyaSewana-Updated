@@ -87,5 +87,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_add">Add</string>
+    <string name="explore">Explore</string>
+    <string name="parts">Parts</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="contact">Contact</string>
+    <string name="things_you">Things You</string>
+    <string name="love">Love</string>
 
 </resources>
