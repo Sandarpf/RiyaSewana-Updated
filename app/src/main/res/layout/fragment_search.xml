@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,5 +8,90 @@
     tools:context=".Fragments.Add">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/search_screen_img"
+            android:layout_width="266dp"
+            android:layout_height="286dp"
+            android:src="@drawable/search_screen_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/search_screen_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="260dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="@string/what_would"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/search_screen_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="312dp"
+            android:layout_marginEnd="240dp"
+            android:layout_marginRight="240dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="@string/search_for"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/search_screen_vehicle_btn"
+            android:layout_width="140dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radious"
+            android:drawableTop="@drawable/search_vehicle_btn_1"
+            android:drawablePadding="0.5dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/vehicles"
+            android:textAlignment="center"
+            android:textColor="@color/strokeColor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <Button
+            android:id="@+id/search_screen_parts_btn"
+            android:layout_width="140dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radious"
+            android:drawableTop="@drawable/search_parts_btn_1"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/parts"
+            android:textAlignment="center"
+            android:textColor="@color/strokeColor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.822"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </RelativeLayout>

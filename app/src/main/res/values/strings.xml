@@ -93,5 +93,11 @@
     <string name="contact">Contact</string>
     <string name="things_you">Things You</string>
     <string name="love">Love</string>
+    <string name="what_would">What would you</string>
+    <string name="search_for">search for?</string>
+    <string name="search_vehicle">Vehicles</string>
+    <string name="search_parts">Parts</string>
+    <string name="add_a_new">Add a new</string>
+    <string name="advertisement">advertisement</string>
 
 </resources>
