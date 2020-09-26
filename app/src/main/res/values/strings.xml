@@ -99,5 +99,10 @@
     <string name="search_parts">Parts</string>
     <string name="add_a_new">Add a new</string>
     <string name="advertisement">advertisement</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="vehicle_price">Vehicle Price</string>
+    <string name="vehicle_mileage">Mileage</string>
+    <string name="vehicle_type">Type</string>
+    <string name="vehicle_location">Location</string>
 
 </resources>
