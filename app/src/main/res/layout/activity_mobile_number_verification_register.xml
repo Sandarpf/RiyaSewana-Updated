@@ -210,7 +210,7 @@
         android:src="@drawable/ic_line4"
         app:layout_constraintEnd_toStartOf="@+id/textView47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBarRegisterMobile" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -224,24 +224,24 @@
         android:src="@drawable/ic_line4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView47"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBarRegisterMobile" />
 
-    <TextView
-        android:id="@+id/textView47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginRight="135dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/otherMethods"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/otherMethods"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarRegisterMobile" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -271,6 +271,22 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/imageView12"
             tools:ignore="MissingConstraints" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRegisterMobile"
+            android:visibility="invisible"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp"
+            android:background="@drawable/white_circle"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFormRegister" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
