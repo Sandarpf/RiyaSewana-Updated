@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1021190591171",
+    "firebase_url": "https://riya-sewana-749fd.firebaseio.com",
+    "project_id": "riya-sewana-749fd",
+    "storage_bucket": "riya-sewana-749fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021190591171:android:f8b05542c10d8274abc876",
+        "android_client_info": {
+          "package_name": "com.example.riyasewana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021190591171-6shshufmg2sc08c495dach2l8emidqeb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.riyasewana",
+            "certificate_hash": "f639c917c78ed90af65975836e158160a526648f"
+          }
+        },
+        {
+          "client_id": "1021190591171-73i8fjj34jh2v3te7vr0uudb70dqpcfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOW9KKn5jVQy0gsXMKgKKOx_rSa4MTJ8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021190591171-73i8fjj34jh2v3te7vr0uudb70dqpcfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

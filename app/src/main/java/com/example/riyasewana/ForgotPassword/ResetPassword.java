@@ -1,19 +1,28 @@
 package com.example.riyasewana.ForgotPassword;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.riyasewana.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ResetPassword extends AppCompatActivity {
 
     Button updatePassBtn;
     TextInputLayout password,confirmPassword;
+    ProgressBar progressBar;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +30,8 @@ public class ResetPassword extends AppCompatActivity {
         updatePassBtn = findViewById(R.id.updatePasswordBtn);
         password = findViewById(R.id.resetPassNewPassword);
         confirmPassword = findViewById(R.id.resetPassConfirmPassword);
+        progressBar = findViewById(R.id.progressBarResetPass);
+
 
 
     }
@@ -29,8 +40,27 @@ public class ResetPassword extends AppCompatActivity {
             return;
         }
         else{
-            Intent i = new Intent(getApplicationContext(),ResetPasswordSuccess.class);
-            startActivity(i);
+            String pass = password.getEditText().getText().toString().trim();
+            FirebaseUser currentUser = mAuth.getCurrentUser();
+//            if(currentUser != null){
+//                Toast.makeText(getApplicationContext(), "Not Null", Toast.LENGTH_LONG).show();
+//            }else{
+//                Toast.makeText(getApplicationContext(), "Null", Toast.LENGTH_LONG).show();
+//            }
+            currentUser.updatePassword(pass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(),ResetPasswordSuccess.class);
+                        startActivity(i);
+                        finish();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Password Reset Unsuccessful!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
         }
     }
 
