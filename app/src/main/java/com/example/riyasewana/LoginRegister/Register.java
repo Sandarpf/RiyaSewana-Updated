@@ -1,17 +1,29 @@
 package com.example.riyasewana.LoginRegister;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.riyasewana.Models.UsersModel;
 import com.example.riyasewana.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.ProviderQueryResult;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Register extends AppCompatActivity {
 
@@ -19,6 +31,7 @@ public class Register extends AppCompatActivity {
     TextView txtLogin;
     TextInputLayout name, uname, email, password;
     Button nextToEnterMobileNumber;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +46,7 @@ public class Register extends AppCompatActivity {
         uname = findViewById(R.id.registerUserName);
         email = findViewById(R.id.registerEmail);
         password = findViewById(R.id.registerPassword);
+        progressBar = findViewById(R.id.progressBarRegister1);
 
         txtLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,13 +58,51 @@ public class Register extends AppCompatActivity {
     }
 
     public void callNextActivityMobile(View view){
-        Intent i = new Intent(getApplicationContext(),MobileNumberVerificationRegister.class);
+
 
         if(!validateName() | !validateUserName() | !validateEmail() | !validatePassword()){
             return;
         }
         else {
-            startActivity(i);
+            progressBar.setVisibility(View.VISIBLE);
+            final Intent i = new Intent(Register.this,MobileNumberVerificationRegister.class);
+            final String cusName = name.getEditText().getText().toString().trim();
+            final String cusUName = uname.getEditText().getText().toString().trim();
+            final String cusMail = email.getEditText().getText().toString().trim();
+            final String cusPass = password.getEditText().getText().toString().trim();
+
+
+            DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+
+            rootRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    Iterable<DataSnapshot> userChildren = dataSnapshot.getChildren();
+
+                    for (DataSnapshot user: userChildren) {
+                        UsersModel u = user.getValue(UsersModel.class);      //make a model User with necessary fields
+
+                        if(u.getEmail().equalsIgnoreCase(cusMail)){
+                            progressBar.setVisibility(View.GONE);
+                            email.setError("Email Already Exist!");
+                        }else{
+                            i.putExtra("customerName",cusName);
+                            i.putExtra("customerUserName",cusUName);
+                            i.putExtra("customerEmail",cusMail);
+                            i.putExtra("customerPassword",cusPass);
+                            progressBar.setVisibility(View.GONE);
+                            startActivity(i);
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), "Error! : "+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
     }
 

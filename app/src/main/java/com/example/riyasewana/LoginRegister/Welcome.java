@@ -12,12 +12,14 @@ import android.widget.TextView;
 import com.example.riyasewana.Extra.TermsAndConditions;
 import com.example.riyasewana.Fragments.MainScreen;
 import com.example.riyasewana.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Welcome extends AppCompatActivity {
 
     //Variables
     TextView terms;
     Button login,register;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,19 @@ public class Welcome extends AppCompatActivity {
         terms = findViewById(R.id.TermsAndConditionMover);
         login = findViewById(R.id.btnLogin);
         register = findViewById(R.id.btnRegister);
+
+        //getting firebase auth object
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //if the objects getcurrentuser method is not null
+        //means user is already logged in
+        if(firebaseAuth.getCurrentUser() != null){
+            //close this activity
+            finish();
+            //opening profile activity
+            startActivity(new Intent(getApplicationContext(), MainScreen.class));
+        }
+
 
         terms.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +57,7 @@ public class Welcome extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Welcome.this,Login.class);
                 startActivity(i);
+                finish();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +65,7 @@ public class Welcome extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Welcome.this,Register.class);
                 startActivity(i);
+                finish();
             }
         });
 
