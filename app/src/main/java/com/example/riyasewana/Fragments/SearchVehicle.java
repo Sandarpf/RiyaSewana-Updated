@@ -37,7 +37,9 @@ public class SearchVehicle extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        vehicleData();
+        //vehicleData();
+
+        recyclerView.setAdapter(new VehicleSearchAdapter(vehicleData()));
 
     return view;
     }
@@ -50,7 +52,7 @@ public class SearchVehicle extends Fragment {
         vehicleList.add(new VehicleModel(R.drawable.suzuki_alto_2010, "Suzuki Alto 2010", "Rs180,000", "500 km", "Auto", "Kadana"));
         vehicleList.add(new VehicleModel(R.drawable.toyota_premio, "Toyota Premio 2013", "Rs7,650,000", "30,000 km", "Auto", "Kurunagela"));
         vehicleList.add(new VehicleModel(R.drawable.toyota_vitz_2007, "Toyota Vitz 2004", "Rs180,000", "2,500 km", "Auto", "Gampaha"));
-        vehicleList.add(new VehicleModel(R.drawable.toyota_land_cruiser_prado, "Toyota Land Cruiser Prado 2005", "Rs130,000", "9,500,000 km", "Auto", "Malabe"));
+        vehicleList.add(new VehicleModel(R.drawable.toyota_land_cruiser_prado, "Toyota Land Cruiser 2005", "Rs130,000", "9,500,000 km", "Auto", "Malabe"));
 
         return vehicleList;
     }
