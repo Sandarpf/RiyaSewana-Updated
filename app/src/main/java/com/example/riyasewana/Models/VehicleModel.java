@@ -1,4 +1,4 @@
-package com.example.riyasewana.Fragments;
+package com.example.riyasewana.Models;
 
 public class VehicleModel {
 

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.riyasewana.Adapters.VehicleSearchAdapter;
+import com.example.riyasewana.Models.VehicleModel;
 import com.example.riyasewana.R;
 
 import java.util.ArrayList;
