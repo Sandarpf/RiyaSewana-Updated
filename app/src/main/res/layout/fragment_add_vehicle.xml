@@ -4,31 +4,700 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_reset_password"
-    tools:context=".Fragments.Add">
+    tools:context=".Fragments.MainScreen">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/add_vehicle_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="124dp"
-            android:layout_marginLeft="124dp"
-            android:layout_marginTop="256dp"
-            android:fontFamily="@font/playfair_display_bold"
-            android:text="Add Vehicle"
-            android:textColor="@color/textColor"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_reset_password">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/add_vehicle_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="134dp"
+                    android:layout_marginLeft="134dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/playfair_display_bold"
+                    android:text="Add Vehicle"
+                    android:textColor="@color/textColor"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radious"
+                    android:paddingBottom="30dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:id="@+id/container_fragment">
 
+                    <TextView
+                        android:id="@+id/add_vehicle_contact_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/playfair_display_bold"
+                        android:text="Contact Info"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="85dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Name : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_name_edit_text"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="68dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_tell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="130dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Tell : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_tell_edit_text"
+                        android:layout_width="271dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="118dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="number"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="175dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="City : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_city_text"
+                        android:layout_width="270dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="170dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_vehicle_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="230dp"
+                        android:fontFamily="@font/playfair_display_bold"
+                        android:text="Vehicle Info"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="270dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Type : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_type_text"
+                        android:layout_width="270dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="263dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_make"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="325dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Make : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_make_text"
+                        android:layout_width="270dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="320dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="380dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Condition : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_condition_text"
+                        android:layout_width="253dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="370dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="435dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Model : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_model_edit_text"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="430dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="490dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Price : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_price_edit_text"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="480dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="540dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Year : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_year_text"
+                        android:layout_width="267dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="535dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_transmission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="595dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Transmission : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_transmission_text"
+                        android:layout_width="231dp"
+                        android:layout_height="59dp"
+                        android:layout_marginStart="139dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="580dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_fuel_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="655dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Fuel Type : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/add_vehicle_fuel_type_text"
+                        android:layout_width="216dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="135dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="650dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_engine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="725dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Engine CC : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_engine_edit_text"
+                        android:layout_width="249dp"
+                        android:layout_height="51dp"
+                        android:layout_marginStart="125dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="718dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_milage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="788dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Milage(Km) : "
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_milage_edit_text"
+                        android:layout_width="245dp"
+                        android:layout_height="51dp"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="780dp"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_vehicle_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="850dp"
+                        android:fontFamily="@font/playfair_display_bold"
+                        android:text="Vehicle Condition"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/air_condition_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Air Condition"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="885dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/power_mirror_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power Mirror"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="920dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/power_steering_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power Steering"
+                        android:layout_marginStart="190dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="885dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/power_window_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power Window"
+                        android:layout_marginStart="190dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="920dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_vehicle_images"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="968dp"
+                        android:fontFamily="@font/playfair_display_bold"
+                        android:text="Vehicle Images"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/add_vehicle_front_img_txt"
+                        android:layout_width="147dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1010dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Vehicle Front"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/add_vehicle_front_images"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1040dp"
+                        android:src="@drawable/add_vehicle_img"></ImageView>
+
+                    <TextView
+                        android:id="@+id/add_vehicle_back_img_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1010dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Vehicle Back"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/add_vehicle_back_images"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1040dp"
+                        android:src="@drawable/add_vehicle_img">
+                    </ImageView>
+
+                <!--<Button
+                        android:id="@+id/add_vehicle_back_images_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Vehicle Back"
+                        android:layout_marginStart="198dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1010dp"></Button> -->
+
+                    <TextView
+                        android:id="@+id/add_vehicle_inside_img_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1110dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Vehicle Inside"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/add_vehicle_inside_images"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1145dp"
+                        android:src="@drawable/add_vehicle_img">
+                    </ImageView>
+
+                 <!--<Button
+                        android:id="@+id/add_vehicle_inside_images_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Vehicle Inside"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1080dp"></Button> -->
+
+                    <TextView
+                        android:id="@+id/add_vehicle_other_img_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1110dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Other"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/add_vehicle_other_images"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1145dp"
+                        android:src="@drawable/add_vehicle_img">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/add_vehicle_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1230dp"
+                        android:fontFamily="@font/playfair_display_bold"
+                        android:text="Description"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/add_vehicle_description_textview"
+                        android:layout_width="341dp"
+                        android:layout_height="72dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="1260dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
+                    <Button
+                        android:id="@+id/add_vehicle_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="63dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginLeft="115dp"
+                        android:layout_marginTop="1360dp"
+                        android:background="@drawable/ic_btnrectanglewelcome"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="20dp"
+                        android:text="Add Vehicle"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/btnRegister"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
