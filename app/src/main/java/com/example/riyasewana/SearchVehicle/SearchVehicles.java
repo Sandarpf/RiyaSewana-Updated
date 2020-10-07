@@ -7,9 +7,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.riyasewana.Adapters.VehicleSearchAdapter;
@@ -24,7 +27,9 @@ public class SearchVehicles extends AppCompatActivity {
 
     public static ArrayList<VehicleModel> vehicleList = new ArrayList<VehicleModel>();
     private ListView listView;
+    private EditText searchBar;
     Button back_arrow_to_search;
+    private VehicleSearchAdapter adapter;
 
     private Button allButton;
     private Button toyotaButton;
@@ -56,8 +61,30 @@ public class SearchVehicles extends AppCompatActivity {
         setUpVehicleList();
         setUpOnClickListener();
         //vehicleSearch();
+
+        /*
+        searchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                (SearchVehicles.this).adapter.getFilter().filter(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+         */
     }
 
+    /*
     private void vehicleSearch()
     {
         SearchView searchView = findViewById(R.id.vehicle_list_search_view);
@@ -87,6 +114,7 @@ public class SearchVehicles extends AppCompatActivity {
             }
         });
     }
+     */
 
     private void setUpVehicleData()
     {
