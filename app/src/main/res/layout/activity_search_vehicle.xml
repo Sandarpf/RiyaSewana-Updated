@@ -24,7 +24,24 @@
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent" />
 
-   <SearchView
+   <EditText
+       android:id="@+id/vehicle_list_search_view"
+       android:layout_width="391dp"
+       android:layout_height="wrap_content"
+       android:hint="Search Vehicle"
+       android:drawableStart="@drawable/ic_baseline_search_24"
+       android:drawablePadding="3dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="20dp"
+       android:background="@drawable/vehicle_search_bar"
+       android:iconifiedByDefault="false"
+       android:queryHint="Vehicle Name"
+       android:drawableLeft="@drawable/ic_baseline_search_24">
+   </EditText>
+
+  <!-- <SearchView
        android:id="@+id/vehicle_list_search_view"
        android:layout_width="391dp"
        android:layout_height="wrap_content"
@@ -34,7 +51,8 @@
        android:layout_marginBottom="20dp"
        android:background="@drawable/vehicle_search_bar"
        android:iconifiedByDefault="false"
-       android:queryHint="Vehicle Name"></SearchView>
+       android:queryHint="Vehicle Name">
+   </SearchView> -->
 
    <LinearLayout
        android:layout_width="match_parent"
