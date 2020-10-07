@@ -1,5 +1,6 @@
 package com.example.riyasewana.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.riyasewana.R;
+import com.example.riyasewana.SearchParts.SearchParts;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,11 +51,8 @@ public class Search extends Fragment {
             @Override
             public void onClick(View view) {
 
-                SearchParts searchParts = new SearchParts();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container_fragment, searchParts);
-                transaction.commit();
-
+                Intent intent = new Intent(getActivity(), SearchParts.class);
+                startActivity(intent);
             }
         });
 
