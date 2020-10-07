@@ -14,7 +14,6 @@ import android.widget.ListView;
 
 import com.example.riyasewana.Adapters.VehicleSearchAdapter;
 import com.example.riyasewana.Fragments.Search;
-import com.example.riyasewana.Fragments.SearchParts;
 import com.example.riyasewana.Models.VehicleModel;
 import com.example.riyasewana.R;
 
