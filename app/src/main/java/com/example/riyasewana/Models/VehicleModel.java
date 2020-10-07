@@ -3,15 +3,25 @@ package com.example.riyasewana.Models;
 public class VehicleModel {
 
     int vehicle_img;
-    String vehicle_name, vehicle_price , vehicle_mileage , vehicle_type , vehicle_location;
+    String  vehicle_id, vehicle_name, vehicle_price , vehicle_mileage , vehicle_type , vehicle_location;
 
-    public VehicleModel(int vehicle_img, String vehicle_name, String vehicle_price, String vehicle_mileage, String vehicle_type, String vehicle_location) {
+    public VehicleModel(String vehicle_id, int vehicle_img, String vehicle_name, String vehicle_price, String vehicle_mileage, String vehicle_type, String vehicle_location) {
+        this.vehicle_id = vehicle_id;
         this.vehicle_img = vehicle_img;
         this.vehicle_name = vehicle_name;
         this.vehicle_price = vehicle_price;
         this.vehicle_mileage = vehicle_mileage;
         this.vehicle_type = vehicle_type;
         this.vehicle_location = vehicle_location;
+    }
+
+
+    public String getVehicle_id() {
+        return vehicle_id;
+    }
+
+    public void setVehicle_id(String vehicle_id) {
+        this.vehicle_id = vehicle_id;
     }
 
     public int getVehicle_img() {
