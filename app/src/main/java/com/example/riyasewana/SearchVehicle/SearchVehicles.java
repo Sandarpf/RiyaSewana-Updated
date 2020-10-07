@@ -27,7 +27,7 @@ public class SearchVehicles extends AppCompatActivity {
 
     public static ArrayList<VehicleModel> vehicleList = new ArrayList<VehicleModel>();
     private ListView listView;
-    private EditText searchBar;
+    //private EditText searchBar;
     Button back_arrow_to_search;
     private VehicleSearchAdapter adapter;
 
