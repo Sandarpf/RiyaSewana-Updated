@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.EventLog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,13 +42,17 @@ public class AddVehicle extends Fragment {
 
     String v_name, v_tell , v_model , v_price , v_engine , v_mileage;
     ImageView vehicleFrontImg , vehicleBackImg , vehicleInsideImg , vehicleOtherImg;
+    Button addVehicleFrontImgBtn, addVehicleBackImgBtn, addVehicleInsideImgBtn, addVehicleOtherImgBtn;
     Button addNewVehicleBtn;
     EditText vehicleName , vehicleTell , vehicleModel , vehiclePrice , vehicleEngineCC , vehicleMileage;
     CheckBox vehicleAirCondition , vehiclePowerStearing , vehiclePowerMirror , vehiclePowerWindow;
     EditText vehicleDescription;
 
-    private static final int GalleryPick = 1;
-    //private final int MultipleImgGallary = 2;
+    private static final int GALLERY_REQUEST_CODE = 123;
+
+    //img - previous
+    //private static final int GalleryPick = 1;
+
     private Uri imageUri;
 
     public AddVehicle() {
@@ -61,6 +66,11 @@ public class AddVehicle extends Fragment {
         View v = inflater.inflate(R.layout.fragment_add_vehicle, container, false);
 
         addNewVehicleBtn = (Button) v.findViewById(R.id.add_vehicle_btn);
+
+        addVehicleFrontImgBtn = (Button) v.findViewById(R.id.add_vehicle_front_img_btn);
+        addVehicleBackImgBtn = (Button) v.findViewById(R.id.add_vehicle_back_img_btn);
+        addVehicleInsideImgBtn = (Button) v.findViewById(R.id.add_vehicle_inside_img_btn);
+        addVehicleOtherImgBtn = (Button) v.findViewById(R.id.add_vehicle_other_img_btn);
 
         vehicleFrontImg = (ImageView) v.findViewById(R.id.add_vehicle_front_images);
         vehicleBackImg = (ImageView) v.findViewById(R.id.add_vehicle_back_images);
@@ -83,6 +93,80 @@ public class AddVehicle extends Fragment {
 
         addNewVehicleBtn = (Button) v.findViewById(R.id.add_vehicle_btn);
 
+
+        v.findViewById(R.id.add_vehicle_front_img_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                {
+                    requestPermissions(
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            2000
+                    );
+                }
+                else {
+                    startGalleryVehicleFront();
+                }
+            }
+        });
+
+        /*
+        v.findViewById(R.id.add_vehicle_back_img_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                {
+                    requestPermissions(
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            2000
+                    );
+                }
+                else {
+                    startGalleryVehicleBack();
+                }
+            }
+        });
+
+        v.findViewById(R.id.add_vehicle_inside_img_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                {
+                    requestPermissions(
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            2000
+                    );
+                }
+                else {
+                    startGalleryVehicleInside();
+                }
+            }
+        });
+
+        v.findViewById(R.id.add_vehicle_other_img_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                {
+                    requestPermissions(
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            2000
+                    );
+                }
+                else {
+                    startGalleryOther();
+                }
+            }
+        });
+
+         */
+
+
+        /* previous 1
         vehicleFrontImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,6 +194,8 @@ public class AddVehicle extends Fragment {
                 OpenGallery();
             }
         });
+
+         */
 
         addNewVehicleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +256,66 @@ public class AddVehicle extends Fragment {
         return v;
     }
 
+    private void startGalleryVehicleFront()
+    {
+        Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        cameraIntent.setType("image/*");
+        if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, 1000);
+        }
+    }
+
+    private void startGalleryVehicleBack()
+    {
+        Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        cameraIntent.setType("image/*");
+        if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, 1000);
+        }
+    }
+
+    private void startGalleryVehicleInside()
+    {
+        Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        cameraIntent.setType("image/*");
+        if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, 1000);
+        }
+    }
+
+    private void startGalleryOther()
+    {
+        Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        cameraIntent.setType("image/*");
+        if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, 1000);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if(resultCode == RESULT_OK) {
+            if(requestCode == 1000){
+                Uri returnUri = data.getData();
+                Bitmap bitmapImage = null;
+                try {
+                    bitmapImage = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), returnUri);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                vehicleFrontImg.setImageBitmap(bitmapImage);
+                vehicleBackImg.setImageBitmap(bitmapImage);
+                vehicleInsideImg.setImageBitmap(bitmapImage);
+                vehicleOtherImg.setImageBitmap(bitmapImage);
+            }
+
+        }
+        //Uri returnUri;
+        //returnUri = data.getData();
+    }
+
+    /*previous 1
     private void OpenGallery() {
 
         //startActivityForResult(Intent.createChooser(new Intent().setAction(Intent.ACTION_GET_CONTENT).setType("image/*"), "Select vehicle image"),GalleryPick);
@@ -178,11 +324,12 @@ public class AddVehicle extends Fragment {
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
         startActivityForResult(Intent.createChooser(galleryIntent, "Pick vehicle image"), GalleryPick);
+
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        //super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == GalleryPick && requestCode == RESULT_OK && data != null){
             imageUri = data.getData();
@@ -206,6 +353,8 @@ public class AddVehicle extends Fragment {
 
         }
     }
+     */
+
 
     private void validateVehicleDetails()
     {
@@ -235,9 +384,10 @@ public class AddVehicle extends Fragment {
         else if (TextUtils.isEmpty(v_mileage)){
             Toast.makeText(getActivity(), "Please enter vehicle mileage" , LENGTH_LONG).show();
         }
+        /*
         else if (imageUri == null){
             Toast.makeText(getActivity(),"Vehicle image is required" , LENGTH_LONG).show();
-        }
+        }*/
         else {
             Profile profile = new Profile();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();

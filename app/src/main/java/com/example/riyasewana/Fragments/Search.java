@@ -48,8 +48,11 @@ public class Search extends Fragment {
             @Override
             public void onClick(View view) {
 
+
+
                 Intent intent = new Intent(getActivity(), SearchParts.class);
                 startActivity(intent);
+
             }
         });
 
