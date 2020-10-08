@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/search_vehicle_container"
+    android:background="@drawable/ic_reset_password"
+    tools:context=".SearchVehicle.SearchVehicles">
+
+   <Button
+       android:id="@+id/back_arrow_to_search"
+       android:layout_width="wrap_content"
+       android:layout_height="17dp"
+       android:layout_marginStart="27dp"
+       android:layout_marginLeft="27dp"
+       android:layout_marginTop="29dp"
+       android:layout_marginEnd="367dp"
+       android:layout_marginRight="367dp"
+       android:background="@drawable/ic_backarrow"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/vehicle_list_search_view"
+       android:layout_width="391dp"
+       android:layout_height="wrap_content"
+       android:hint="Search Vehicle"
+       android:drawableStart="@drawable/ic_baseline_search_24"
+       android:drawablePadding="3dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="20dp"
+       android:background="@drawable/vehicle_search_bar"
+       android:iconifiedByDefault="false"
+       android:queryHint="Vehicle Name"
+       android:drawableLeft="@drawable/ic_baseline_search_24">
+   </EditText>
+
+  <!-- <SearchView
+       android:id="@+id/vehicle_list_search_view"
+       android:layout_width="391dp"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="20dp"
+       android:background="@drawable/vehicle_search_bar"
+       android:iconifiedByDefault="false"
+       android:queryHint="Vehicle Name">
+   </SearchView> -->
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="0dp">
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="All"
+          android:id="@+id/all_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="all_filter_tapped"/>
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="Toyota"
+          android:id="@+id/toyota_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="toyota_filter_tapped"/>
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="Suzuki"
+          android:id="@+id/suzuki_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="suzuki_filter_tapped"/>
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="10dp">
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="TVS"
+          android:id="@+id/auto_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="auto_filter_tapped"/>
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="Threewheeler"
+          android:id="@+id/threeweel_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="threeweel_filter_tapped"/>
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="Bike"
+          android:id="@+id/bike_btn"
+          android:background="@color/shadedBlue"
+          android:onClick="bike_filter_tapped"/>
+   </LinearLayout>
+
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/vehicle_list_display"/>
+
+</LinearLayout>
