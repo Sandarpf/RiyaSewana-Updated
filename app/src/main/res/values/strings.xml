@@ -108,5 +108,16 @@
     <string name="vehicle_location">Location</string>
     <string name="search_bar_vehicle">Search Vehicle</string>
     <string name="contact_info_add">Contact Info</string>
+    <string name="vehicle_features">Features</string>
+    <string name="vehicle_specifications">Specifications</string>
+    <string name="vehicle_specification_engine">Engine - 6498CC</string>
+    <string name="vehicle_specification_transmission">Transmission</string>
+    <string name="vehicle_specification_year">Year - 2004</string>
+    <string name="vehicle_specification_condition">Condition-Used</string>
+    <string name="vehicle_specification_mileage">Mileage-963km</string>
+    <string name="vehicle_specification_fuel">Fuel Type - Petrol</string>
+    <string name="vehicle_description">Description</string>
+    <string name="vehicle_description_area">Price negotiable after inspection. Reasonable offers are welcomed</string>
+    <string name="vehicle_location_view">Location</string>
 
 </resources>

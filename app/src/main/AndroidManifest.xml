@@ -5,9 +5,13 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
 
 
     <application
@@ -17,14 +21,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        android:theme="@style/AppTheme">
 
         <activity android:name=".SearchParts.ItemsPreviewActivity"></activity>
         <activity android:name=".SearchParts.SearchParts"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
-
-
-
+        <activity android:name=".SearchVehicle.ViewSearchedVehicle"></activity>
+        <activity android:name=".SearchVehicle.SearchVehicles" />
         <activity android:name=".BordingScreen.BordingScreen" />
         <activity android:name=".Fragments.MainScreen" />
         <activity android:name=".Fragments.Home"

@@ -86,7 +86,7 @@
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/lightBlue"
                     android:textSize="18dp"
-                    android:gravity="center_horizontal" />
+                    android:gravity="center_horizontal"/>
 
                     <TextView
                         android:layout_width="match_parent"
