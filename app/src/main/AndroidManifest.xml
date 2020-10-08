@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.riyasewana">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,7 +19,8 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity android:name=".BordingScreen.BordingScreen" />
         <activity android:name=".Fragments.MainScreen" />
-        <activity android:name=".Fragments.Home" />
+        <activity android:name=".Fragments.Home"
+            tools:ignore="Instantiatable" />
         <activity android:name=".ForgotPassword.ResetPasswordSuccess" />
         <activity android:name=".ForgotPassword.ResetPassword" />
         <activity android:name=".ForgotPassword.ForgotPasswordVeriyCode" />
