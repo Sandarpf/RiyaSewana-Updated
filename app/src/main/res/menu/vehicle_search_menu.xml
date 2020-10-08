@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/vehicle_search_bar"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search_bar_vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_bar_vehicle"
+        android:background="@drawable/search_view"
+        android:layout_alignParentTop="true"
+        android:layout_margin="12dp"
+        />
+
+</menu>
+

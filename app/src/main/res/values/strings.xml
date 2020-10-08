@@ -101,5 +101,12 @@
     <string name="search_parts">Parts</string>
     <string name="add_a_new">Add a new</string>
     <string name="advertisement">advertisement</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="vehicle_price">Vehicle Price</string>
+    <string name="vehicle_mileage">Mileage</string>
+    <string name="vehicle_type">Type</string>
+    <string name="vehicle_location">Location</string>
+    <string name="search_bar_vehicle">Search Vehicle</string>
+    <string name="contact_info_add">Contact Info</string>
 
 </resources>
