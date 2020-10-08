@@ -193,7 +193,7 @@ public class SearchParts extends AppCompatActivity {
                         String searchStr = constraint.toString().toLowerCase();
 
                         for(ItemsModel itemsModel:itemsModelsl){
-                            if(itemsModel.getName().contains(searchStr)){
+                            if(itemsModel.getName().contains(searchStr) || itemsModel.getPrice().contains(searchStr)){
                                 resultsModel.add(itemsModel);
 
                             }
