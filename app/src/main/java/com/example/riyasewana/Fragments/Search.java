@@ -47,11 +47,13 @@ public class Search extends Fragment {
             @Override
             public void onClick(View view) {
 
+                /*
                 SearchParts searchParts = new SearchParts();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.container_fragment, searchParts);
                 transaction.commit();
 
+                 */
             }
         });
 

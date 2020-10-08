@@ -1,23 +1,18 @@
 package com.example.riyasewana.SearchVehicle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.example.riyasewana.Adapters.VehicleSearchAdapter;
 import com.example.riyasewana.Fragments.Search;
-import com.example.riyasewana.Fragments.SearchParts;
 import com.example.riyasewana.Models.VehicleModel;
 import com.example.riyasewana.R;
 
@@ -27,6 +22,8 @@ public class SearchVehicles extends AppCompatActivity {
 
     public static ArrayList<VehicleModel> vehicleList = new ArrayList<VehicleModel>();
     private ListView listView;
+    SearchView vehicleSearchView;
+
     //private EditText searchBar;
     Button back_arrow_to_search;
     private VehicleSearchAdapter adapter;
@@ -60,7 +57,27 @@ public class SearchVehicles extends AppCompatActivity {
         setUpVehicleData();
         setUpVehicleList();
         setUpOnClickListener();
-        //vehicleSearch();
+        vehicleSearch();
+
+        /*
+        vehicleSearchView = (SearchView) findViewById(R.id.vehicle_list_search_view);
+
+        vehicleSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                adapter.getFilter().filter(s);
+
+                return false;
+            }
+        });
+
+         */
 
         /*
         searchBar.addTextChangedListener(new TextWatcher() {
@@ -84,37 +101,42 @@ public class SearchVehicles extends AppCompatActivity {
          */
     }
 
-    /*
     private void vehicleSearch()
     {
+
         SearchView searchView = findViewById(R.id.vehicle_list_search_view);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+            public boolean onQueryTextSubmit(String s) {
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String newText)
+            public boolean onQueryTextChange(String s)
             {
                 ArrayList<VehicleModel> filteredVehicles = new ArrayList<VehicleModel>();
+
                 for (VehicleModel vehicleModel: vehicleList)
                 {
-                    if (vehicleModel.getVehicle_name().toLowerCase().contains(newText.toLowerCase()))
+                    if (vehicleModel.getVehicle_name().toLowerCase().contains(s.toLowerCase()))
                     {
                         filteredVehicles.add(vehicleModel);
                     }
                 }
 
                 VehicleSearchAdapter adapter = new VehicleSearchAdapter(getApplicationContext(), 0, filteredVehicles);
+
+                adapter.getFilter().filter(s);
+
+                listView = (ListView) findViewById(R.id.vehicle_list_display);
                 listView.setAdapter(adapter);
 
                 return false;
             }
         });
     }
-     */
+
 
     private void setUpVehicleData()
     {
@@ -195,8 +217,9 @@ public class SearchVehicles extends AppCompatActivity {
     public void all_filter_tapped(View view)
     {
         selectedFilter = "all";
-        VehicleSearchAdapter adapter = new VehicleSearchAdapter(getApplicationContext(), 0, vehicleList);
+        final VehicleSearchAdapter adapter = new VehicleSearchAdapter(getApplicationContext(), 0, vehicleList);
         listView.setAdapter(adapter);
+
     }
 
     public void toyota_filter_tapped(View view)
