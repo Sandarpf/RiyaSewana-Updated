@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.riyasewana.R;
+import com.example.riyasewana.SearchParts.SearchParts;
 import com.example.riyasewana.SearchVehicle.SearchVehicles;
 
 /**
@@ -47,13 +48,11 @@ public class Search extends Fragment {
             @Override
             public void onClick(View view) {
 
-                /*
-                SearchParts searchParts = new SearchParts();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container_fragment, searchParts);
-                transaction.commit();
 
-                 */
+
+                Intent intent = new Intent(getActivity(), SearchParts.class);
+                startActivity(intent);
+
             }
         });
 

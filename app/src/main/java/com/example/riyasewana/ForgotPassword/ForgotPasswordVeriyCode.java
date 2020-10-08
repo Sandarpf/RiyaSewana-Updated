@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ForgotPasswordVeriyCode extends AppCompatActivity {
     Button verifyBtn;
-    TextView countryCode, Mobile;
+    TextView countryCode, Mobile,resendCode;
     ProgressBar progressBar;
     PinView mobilePin;
     String codeBySystem;
@@ -41,13 +41,14 @@ public class ForgotPasswordVeriyCode extends AppCompatActivity {
 
         String num = getIntent().getStringExtra("enteredNum");
         String ccode = getIntent().getStringExtra("countryCode");
-        String cusNumber = getIntent().getStringExtra("mNumber");
+        final String cusNumber = getIntent().getStringExtra("mNumber");
 
         verifyBtn = findViewById(R.id.verifyCodeForgotPass);
         countryCode = findViewById(R.id.countryCodeMobile);
         Mobile = findViewById(R.id.mobileNumberForgotPass);
         progressBar = findViewById(R.id.progressBarForgotPassVerifyCode);
         mobilePin = findViewById(R.id.pinViewForgotPassword);
+        resendCode = findViewById(R.id.forgotPassVerifyCode);
 
         countryCode.setText(ccode);
         Mobile.setText(num);
@@ -62,6 +63,12 @@ public class ForgotPasswordVeriyCode extends AppCompatActivity {
                 if(!code.isEmpty()){
                     verifyCode(code);
                 }
+            }
+        });
+        resendCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendVerificationCodeToUser(cusNumber);
             }
         });
 
