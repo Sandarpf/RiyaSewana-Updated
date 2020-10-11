@@ -1,10 +1,13 @@
 package com.example.riyasewana.SearchVehicle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -12,6 +15,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.example.riyasewana.Adapters.VehicleSearchAdapter;
+import com.example.riyasewana.Fragments.MainScreen;
 import com.example.riyasewana.Fragments.Search;
 import com.example.riyasewana.Models.VehicleModel;
 import com.example.riyasewana.R;
@@ -42,14 +46,14 @@ public class SearchVehicles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_vehicle);
 
-        back_arrow_to_search = findViewById(R.id.back_arrow_to_search);
+        back_arrow_to_search = (Button) findViewById(R.id.back_arrow_to_search);
         back_arrow_to_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                Search searchFragment = new Search();
-                fragmentManager.beginTransaction().replace(R.id.search_vehicle_container, searchFragment).commit();
+                Intent intent = new Intent(SearchVehicles.this, MainScreen.class);
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -101,6 +105,8 @@ public class SearchVehicles extends AppCompatActivity {
          */
     }
 
+
+
     private void vehicleSearch()
     {
 
@@ -133,6 +139,9 @@ public class SearchVehicles extends AppCompatActivity {
                 listView.setAdapter(adapter);
 
                 return false;
+
+
+
             }
         });
     }

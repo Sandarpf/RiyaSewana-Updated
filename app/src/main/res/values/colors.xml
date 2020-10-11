@@ -10,5 +10,8 @@
     <color name="green">#147018</color>
     <color name="lightBlue">#177DCD</color>
     <color name="shadedBlue">#E6FAFD</color>
+    <color name="color1">#33D8FF</color>
+    <color name="color2">#3385FF</color>
+    <color name="color3">#2238AF</color>
 
 </resources>

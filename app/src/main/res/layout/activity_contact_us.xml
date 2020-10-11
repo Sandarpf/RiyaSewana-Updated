@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Extra.ContactUs"
+    android:background="@drawable/ic_home_contact">
+
+
+  <TextView
+      android:id="@+id/textView60"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="107dp"
+      android:layout_marginLeft="107dp"
+      android:layout_marginTop="35dp"
+      android:fontFamily="@font/playfair_display_bold"
+      android:text="@string/haveAQuestion"
+      android:textColor="#000000"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/textView67"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="125dp"
+      android:layout_marginRight="125dp"
+      android:fontFamily="@font/playfair_display_bold"
+      android:text="@string/inYourMind"
+      android:textColor="#000000"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+  <ImageView
+      android:id="@+id/imageView31"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView67"
+      app:srcCompat="@drawable/contactus" />
+
+  <TextView
+      android:id="@+id/textView68"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:fontFamily="@font/nunito_sans_black"
+      android:text="@string/contactUs"
+      android:textColor="@color/colorAccent"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+  <RelativeLayout
+      android:id="@+id/relativeLayoutCard"
+      android:layout_width="290dp"
+      android:layout_height="80dp"
+      android:layout_marginTop="55dp"
+      android:background="@drawable/register_form_shape"
+      android:elevation="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textView68">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:id="@+id/relativeLayout3"
+          android:layout_width="45dp"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/ic_ellipse_contact_us"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bx_share_alt" />
+      </RelativeLayout>
+
+      <TextView
+          android:id="@+id/textView70"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:fontFamily="@font/raleway_black"
+          android:text="@string/socialProfiles"
+          android:textColor="#7C7A7A"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.601"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+          android:id="@+id/imageView32"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginRight="15dp"
+          android:src="@drawable/ic_bxl_instagram"
+          app:layout_constraintEnd_toStartOf="@+id/imageView33"
+          app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginRight="15dp"
+          android:src="@drawable/ic_bxl_facebook"
+          app:layout_constraintEnd_toStartOf="@+id/imageView32"
+          app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+      <ImageView
+          android:id="@+id/imageView34"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="52dp"
+          android:layout_marginRight="52dp"
+          android:src="@drawable/ic_bxl_twitter"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+      <ImageView
+          android:id="@+id/imageView33"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginRight="15dp"
+          android:src="@drawable/ic_bxl_linkedin"
+          app:layout_constraintEnd_toStartOf="@+id/imageView34"
+          app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="290dp"
+      android:layout_height="80dp"
+      android:layout_marginTop="55dp"
+      android:background="@drawable/register_form_shape"
+      android:elevation="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/relativeLayoutCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:id="@+id/relativeLayout4"
+          android:layout_width="45dp"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/ic_ellipse_contact_us"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bx_mail_send" />
+      </RelativeLayout>
+
+      <TextView
+          android:id="@+id/textView71"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:fontFamily="@font/raleway_black"
+          android:text="@string/emailUs"
+          android:textColor="#7C7A7A"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.546"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/textView81"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginLeft="18dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="33dp"
+          android:layout_marginRight="33dp"
+          android:fontFamily="@font/montserrat"
+          android:text="@string/gmail"
+          android:textColor="#2196F3"
+          android:textSize="15sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/relativeLayout4"
+          app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

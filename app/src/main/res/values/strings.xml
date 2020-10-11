@@ -119,5 +119,11 @@
     <string name="vehicle_description">Description</string>
     <string name="vehicle_description_area">Price negotiable after inspection. Reasonable offers are welcomed</string>
     <string name="vehicle_location_view">Location</string>
+    <string name="haveAQuestion">Have a Question</string>
+    <string name="inYourMind">In Your Mind</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="socialProfiles">Social Profiles</string>
+    <string name="emailUs">Email Us</string>
+    <string name="gmail">riyasewana@gmail.com</string>
 
 </resources>
