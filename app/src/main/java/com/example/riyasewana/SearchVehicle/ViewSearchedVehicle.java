@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.Intent;
@@ -17,12 +18,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.riyasewana.Fragments.AddParts;
 import com.example.riyasewana.Models.VehicleModel;
 import com.example.riyasewana.R;
 
 public class ViewSearchedVehicle extends AppCompatActivity {
 
     Button back_arrow_to_search_vehicle;
+    Button vehicle_favourite;
     VehicleModel selectedVehicle;
     private static final int REQUEST_CALL = 1;
     private TextView mobile_no_call;

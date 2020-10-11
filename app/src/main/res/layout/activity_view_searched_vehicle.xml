@@ -39,6 +39,15 @@
                 android:layout_height="1300dp"
                 android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/vehicle_fav_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_baseline_favorite_shadow_24"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="340dp"
+                    android:layout_marginLeft="340dp" />
+
                 <TextView
                     android:id="@+id/vehicle_name"
                     android:layout_width="match_parent"
