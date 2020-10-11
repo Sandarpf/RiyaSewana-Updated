@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.riyasewana.Models.UsersModel;
@@ -24,6 +25,7 @@ import com.hbb20.CountryCodePicker;
 public class MobileNumberVerificationRegister extends AppCompatActivity {
 
     //Variables
+    TextView login;
     Button btnNextToVerifyNumber;
     TextInputLayout mobileNumber;
     CountryCodePicker countryCodePicker;
@@ -36,10 +38,19 @@ public class MobileNumberVerificationRegister extends AppCompatActivity {
         setContentView(R.layout.activity_mobile_number_verification_register);
 
         //Hooks
+        login = findViewById(R.id.loginSwitherReg);
         btnNextToVerifyNumber = findViewById(R.id.btnNextToEVerifyMobileNumber);
         mobileNumber = findViewById(R.id.registerMobileNumber);
         countryCodePicker = findViewById(R.id.countryCodePickerRegister);
         progressBar = findViewById(R.id.progressBarRegisterMobile);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
+            }
+        });
     }
     public void mobileNumberVerify(View view){
         if(!verifyMobile()){
