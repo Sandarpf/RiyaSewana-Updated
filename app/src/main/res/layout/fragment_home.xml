@@ -53,8 +53,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView23"
-            android:gravity="start" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
         <Button
             android:id="@+id/button2"
@@ -63,9 +62,10 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/home_vehicle_btn_box"
             android:drawableLeft="@drawable/home_car_icon"
-            android:drawablePadding="10dp"
+            android:drawablePadding="5dp"
             android:fontFamily="@font/nunito_sans"
             android:paddingLeft="15dp"
+            android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:text="@string/vehicles"
             android:textAlignment="viewStart"
@@ -73,8 +73,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toStartOf="@+id/button"
             app:layout_constraintStart_toEndOf="@+id/contactHome"
-            app:layout_constraintTop_toBottomOf="@+id/imageView23"
-            android:gravity="start" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
         <Button
             android:id="@+id/contactHome"
